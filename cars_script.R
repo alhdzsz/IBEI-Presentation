@@ -24,7 +24,7 @@ mtcars <- mtcars %>%
   mutate(fcon = mpg / 2.352)%>% #creates new variable
   mutate(wt = wt / 2.205) #overwrites a variable
 
-#Descriptive Statistics (saved in directory)
+#Descriptive Statistics (saved in main directory)
 stargazer(mtcars, type = "text", title="Descriptive statistics", digits=1, out="descriptives.txt")
 
 #Select continuous variables
@@ -68,8 +68,7 @@ m3 <- lm(fcon~wt+hp+am, data = mydata)
 m4 <- lm(fcon~wt+hp+am+cyl, data = mydata)
 summary(m4)
 
-#Model Results
-
+#Model Results (saved in main directory)
 stargazer(m1, m2, m3, m4, type="text",
             title="Fuel Economy",
             dep.var.labels=c("Km. per Liter"),
